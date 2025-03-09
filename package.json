@@ -1,12 +1,16 @@
 {
   "name": "my-portfolio",
-  "version": "0.1.0",
+  "type": "module",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest",
+    "prepare": "husky",
+    "check-types": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
     "clsx": "^2.1.1",

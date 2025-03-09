@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/    
+out/            
+
+# Production 
+dist/        
+
+# Testing
+coverage/      
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Env and system files
+.env*
+.DS_Store       # macOS system file
+Thumbs.db       # Windows system file
+
+# Assets
+public/
+static/
+assets/
+
+# Type declaration files
+*.d.ts
+
+# Logs files
+logs/
+*.log
+
+# Git
+.husky
