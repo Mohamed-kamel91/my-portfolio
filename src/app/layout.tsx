@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { AppProvider } from './app-provider';
+import { AppProvider } from './provider';
 
 import '@/styles/globals.css';
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <AppProvider>{children}</AppProvider>
       </body>
