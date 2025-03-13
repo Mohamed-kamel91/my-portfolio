@@ -1,26 +1,69 @@
 @import 'tailwindcss';
+@import './fonts.css';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-display: 'Inter', Arial, Helvetica, sans-serif;
+
+  --background: #f3f4f0;
+  --foreground: #242126;
+
+  --primary: #242126;
+  --primary-foreground: #f3f4f0;
+
+  --secondary: #ffffff;
+  --secondary-foreground: #242126;
+
+  --outline: #f3f4f0;
+  --outline-foreground: #242126;
+
+  --muted: #dbdbdb;
+  --muted-foreground: #575757;
+
+  --border: #dbdbdb;
 }
 
 @theme inline {
+  --font-inter: var(--font-display);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-outline: var(--outline);
+  --color-outline-foreground: var(--outline-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #242126;
+    --foreground: #f3f4f0;
+
+    --primary: #575757;
+    --primary-foreground: #f3f4f0;
+
+    --secondary: #f3f4f0;
+    --secondary-foreground: #242126;
+
+    --outline: #242126;
+    --outline-foreground: #f3f4f0;
+
+    --muted: #575757;
+    --muted-foreground: #969696;
+
+    --border: #575757;
   }
 }
 
 body {
+  font-family: var(--font-inter);
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
