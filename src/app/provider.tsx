@@ -1,3 +1,4 @@
+import { ThemeProvider } from 'next-themes';
 import { PreloadResources } from './preload-resources';
 
 type AppProviderProps = {
@@ -5,5 +6,11 @@ type AppProviderProps = {
 };
 
 export const AppProvider = ({ children }: AppProviderProps) => {
-  return <PreloadResources>{children}</PreloadResources>;
+  return (
+    <PreloadResources>
+      <ThemeProvider enableSystem={false}>
+        {children}
+      </ThemeProvider>
+    </PreloadResources>
+  );
 };
