@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 @import './fonts.css';
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 :root {
   --font-display: 'Inter', Arial, Helvetica, sans-serif;
 
@@ -41,25 +43,23 @@
   --color-muted-foreground: var(--muted-foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #242126;
-    --foreground: #f3f4f0;
+[data-theme='dark'] {
+  --background: #242126;
+  --foreground: #f3f4f0;
 
-    --primary: #575757;
-    --primary-foreground: #f3f4f0;
+  --primary: #575757;
+  --primary-foreground: #f3f4f0;
 
-    --secondary: #f3f4f0;
-    --secondary-foreground: #242126;
+  --secondary: #f3f4f0;
+  --secondary-foreground: #242126;
 
-    --outline: #242126;
-    --outline-foreground: #f3f4f0;
+  --outline: #242126;
+  --outline-foreground: #f3f4f0;
 
-    --muted: #575757;
-    --muted-foreground: #969696;
+  --muted: #575757;
+  --muted-foreground: #969696;
 
-    --border: #575757;
-  }
+  --border: #575757;
 }
 
 body {
