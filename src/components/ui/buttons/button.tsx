@@ -79,9 +79,6 @@ export const Button = React.forwardRef(
       </Component>
     );
   },
-) as PolymorphicComponent<
-  'button',
-  ButtonBaseProps & ButtonVariantsProps
->;
+) as PolymorphicComponent<'button', ButtonCustomProps>;
 
 Button.displayName = 'Button';
