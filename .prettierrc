@@ -8,5 +8,8 @@
   "endOfLine": "lf",
   "plugins": [
     "prettier-plugin-tailwindcss"
+  ],
+  "tailwindFunctions": [
+    "tv"
   ]
 }
