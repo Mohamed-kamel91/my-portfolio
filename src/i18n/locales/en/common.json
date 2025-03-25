@@ -1,0 +1,16 @@
+{
+  "language": {
+    "name": "عربي",
+    "switchTo": "Switch to {{lang}}"
+  },
+  "navigation": {
+    "about": "About",
+    "experience": "Experience",
+    "project": "Project"
+  },
+  "footer": {
+    "cta": "Let's start a project together",
+    "resume": "Resume",
+    "builtBy": "Designed & Built by Mohamed Kamel"
+  }
+}

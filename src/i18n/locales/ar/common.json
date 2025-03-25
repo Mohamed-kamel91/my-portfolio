@@ -1,0 +1,16 @@
+{
+  "language": {
+    "name": "English",
+    "switchTo": "تغيير اللغة إلى {{lang}}"
+  },
+  "navigation": {
+    "about": "عني",
+    "experience": "الخبرة",
+    "project": "المشاريع"
+  },
+  "footer": {
+    "cta": "يلا نبدأ مشروع مع بعض",
+    "resume": "السيرة الذاتية",
+    "builtBy": "تصميم و تنفيذ محمد كامل"
+  }
+}
