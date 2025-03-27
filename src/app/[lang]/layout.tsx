@@ -35,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} dir={dir(lang)}>
       <body>
-        <AppProvider>{children}</AppProvider>
+        <AppProvider lang={lang}>{children}</AppProvider>
       </body>
     </html>
   );
