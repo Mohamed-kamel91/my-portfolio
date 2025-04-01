@@ -10,11 +10,10 @@ import { useLanguage } from './language-context';
 type LanguageSwitcherProps = Partial<LinkProps> &
   Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>;
 
-export const LanguageSwitcher = (
-  props: LanguageSwitcherProps,
-) => {
-  const { href, ...restProps } = props;
-
+export const LanguageSwitcher = ({
+  href,
+  ...props
+}: LanguageSwitcherProps) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -34,7 +33,7 @@ export const LanguageSwitcher = (
       aria-label={t('language.switchTo', {
         lang: isEnglish ? 'Arabic' : 'الإنجليزية',
       })}
-      {...restProps}
+      {...props}
     >
       {t('language.name')}
     </Link>
