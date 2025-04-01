@@ -5,8 +5,8 @@ import { LanguageSwitcher } from './language-switcher';
 
 import { usePathname } from 'next/navigation';
 import { useTranslation } from '@/i18n/client';
-import { useLanguage } from './language-context';
 import { Locales } from '@/i18n/types';
+import { useLanguage } from './language-context';
 
 const translations = {
   en: {
@@ -45,10 +45,10 @@ describe('Language switcher', () => {
       })),
     }));
 
-    vi.mock('../language-context', async () => {
+    vi.mock('./language-context', async () => {
       const langContext = await vi.importActual<
         typeof import('./language-context')
-      >('../language-context');
+      >('./language-context');
       return {
         ...langContext,
         useLanguage: vi.fn(),
