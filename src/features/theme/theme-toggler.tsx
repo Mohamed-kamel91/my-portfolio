@@ -7,6 +7,7 @@ import {
   IconButton,
   IconButtonProps,
 } from '@/components/ui/buttons';
+import { useMounted } from '@/hooks/useMounted';
 
 type ThemeTogglerProps = IconButtonProps<'button'>;
 
@@ -15,6 +16,7 @@ export const ThemeToggler = ({
   ...props
 }: ThemeTogglerProps) => {
   const { theme, setTheme } = useTheme();
+  const isMounted = useMounted();
 
   const isDark = theme === 'dark';
   const actionLabel = isDark
@@ -24,6 +26,10 @@ export const ThemeToggler = ({
   const handleThemeToggle = () => {
     setTheme(isDark ? 'light' : 'dark');
   };
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <IconButton
@@ -35,7 +41,7 @@ export const ThemeToggler = ({
       onClick={handleThemeToggle}
       {...props}
     >
-      {theme && <>{isDark ? <Sun /> : <Moon />}</>}
+      {isDark ? <Sun /> : <Moon />}
     </IconButton>
   );
 };
