@@ -1,13 +1,16 @@
 'use client';
 
-import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
 
 import {
   IconButton,
   IconButtonProps,
 } from '@/components/ui/buttons';
+
 import { useMounted } from '@/hooks/useMounted';
+import { useLanguage } from '../language';
+import { useThemeToggler } from './useThemeToggler';
+import { useTranslation } from '@/i18n/client';
 
 type ThemeTogglerProps = IconButtonProps<'button'>;
 
@@ -15,21 +18,19 @@ export const ThemeToggler = ({
   className,
   ...props
 }: ThemeTogglerProps) => {
-  const { theme, setTheme } = useTheme();
+  const { nextTheme, isDark, handleThemeToggle } =
+    useThemeToggler();
+  const { currentLang } = useLanguage();
+  const { t } = useTranslation(currentLang);
   const isMounted = useMounted();
-
-  const isDark = theme === 'dark';
-  const actionLabel = isDark
-    ? 'Switch to light mode'
-    : 'Switch to dark mode';
-
-  const handleThemeToggle = () => {
-    setTheme(isDark ? 'light' : 'dark');
-  };
 
   if (!isMounted) {
     return null;
   }
+
+  const actionLabel = t('theme.label', {
+    theme: t(`theme.modes.${nextTheme}`),
+  });
 
   return (
     <IconButton
