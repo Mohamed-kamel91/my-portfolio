@@ -1,8 +1,8 @@
 'use client';
 
-import { CookiesProvider } from 'react-cookie';
-
 import { PreloadResources } from './preload-resources';
+import { CookiesProvider } from 'react-cookie';
+import { ThemeProvider } from 'next-themes';
 import { LanguageProvider } from '@/features/language';
 
 import { Locales } from '@/i18n/types';
@@ -19,9 +19,11 @@ export const AppProvider = ({
   return (
     <PreloadResources>
       <CookiesProvider>
-        <LanguageProvider lang={lang}>
-          {children}
-        </LanguageProvider>
+        <ThemeProvider enableSystem={false}>
+          <LanguageProvider lang={lang}>
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
       </CookiesProvider>
     </PreloadResources>
   );

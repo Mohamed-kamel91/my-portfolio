@@ -3,6 +3,13 @@
     "name": "عربي",
     "switchTo": "Switch to {{lang}}"
   },
+  "theme": {
+    "modes": {
+      "light": "light",
+      "dark": "dark"
+    },
+    "label": "Switch to {{theme}} mode"
+  },
   "navigation": {
     "about": "About",
     "experience": "Experience",

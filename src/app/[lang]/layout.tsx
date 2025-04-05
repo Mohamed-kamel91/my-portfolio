@@ -33,7 +33,7 @@ export default async function RootLayout({
   const { lang } = await params;
 
   return (
-    <html lang={lang} dir={dir(lang)}>
+    <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
       <body>
         <AppProvider lang={lang}>{children}</AppProvider>
       </body>

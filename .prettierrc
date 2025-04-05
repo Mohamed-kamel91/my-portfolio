@@ -11,5 +11,14 @@
   ],
   "tailwindFunctions": [
     "tv"
+  ],
+  "overrides": [
+    {
+      "files": ["*.test.*"
+      ],
+      "options": {
+        "printWidth": 80
+      }
+    }
   ]
 }

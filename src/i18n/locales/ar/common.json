@@ -3,6 +3,13 @@
     "name": "English",
     "switchTo": "تغيير اللغة إلى {{lang}}"
   },
+  "theme": {
+    "modes": {
+      "light": "النهاري",
+      "dark": "الليلي"
+    },
+    "label": "تفعيل الوضع {{theme}}"
+  },
   "navigation": {
     "about": "عني",
     "experience": "الخبرة",
