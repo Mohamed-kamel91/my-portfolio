@@ -36,13 +36,18 @@ export const ThemeToggler = ({
     <IconButton
       className={className}
       variant="secondary"
-      title={actionLabel}
+      title={`${nextTheme} mode`}
       aria-label={actionLabel}
       aria-pressed={isDark}
+      data-testid="theme-toggle-btn"
       onClick={handleThemeToggle}
       {...props}
     >
-      {isDark ? <Sun /> : <Moon />}
+      {isDark ? (
+        <Sun size={22} data-testid="sun-icon" />
+      ) : (
+        <Moon size={22} data-testid="moon-icon" />
+      )}
     </IconButton>
   );
 };
