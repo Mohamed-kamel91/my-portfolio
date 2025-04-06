@@ -7,7 +7,7 @@
  */
 export const createPortalWrapper = (
   wrapperId: string,
-  domNode: Element = document.body,
+  domNode: HTMLElement,
 ) => {
   // Create wrapper to append child into
   const wrapperElement = document.createElement('div');
