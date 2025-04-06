@@ -1,50 +1,22 @@
 'use client';
 
-import { ReactNode, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { usePortal } from './usePortal';
 
-import {
-  createPortalWrapper,
-  hasChildElements,
-} from './portal-utils';
-
-type ReactPortalType = {
-  wrapperId?: string;
-  domNode?: Element;
-  children: ReactNode;
+type ReactPortalProps = {
+  id?: string;
+  domNode?: HTMLElement;
+  children: React.ReactNode;
 };
 
 export const ReactPortal = ({
-  wrapperId = 'portal-wrapper',
+  id = 'app',
   domNode,
   children,
-}: ReactPortalType) => {
-  const [portalContainer, setPortalContainer] =
-    useState<HTMLElement | null>(null);
+}: ReactPortalProps) => {
+  const container = usePortal({ id, domNode });
 
-  useEffect(() => {
-    let container = document.getElementById(wrapperId);
+  if (!container) return null;
 
-    // Create a portal container if no container is found or wrapperId is not provided
-    if (!container) {
-      container = createPortalWrapper(wrapperId, domNode);
-    }
-
-    setPortalContainer(container);
-
-    // Delete container when component unmounts
-    return () => {
-      if (
-        container &&
-        !hasChildElements(container) &&
-        container.parentElement
-      ) {
-        container.parentElement.removeChild(container);
-      }
-    };
-  }, [wrapperId, domNode]);
-
-  if (!portalContainer) return null;
-
-  return createPortal(children, portalContainer);
+  return createPortal(children, container);
 };
