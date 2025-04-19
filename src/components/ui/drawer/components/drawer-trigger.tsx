@@ -30,8 +30,10 @@ export const DrawerTrigger = ({
 }: DrawerTriggerProps) => {
   const { id: drawerId, isOpen, toggle } = useDrawer();
 
-  const a11y: React.AriaAttributes = {
-    'aria-label': `${isOpen ? 'Close' : 'Open'} drawer`,
+  const ariaLabel =
+    props['aria-label'] ?? `${isOpen ? 'Close' : 'Open'} drawer`;
+
+  const ariaStates: React.AriaAttributes = {
     'aria-haspopup': 'dialog',
     'aria-expanded': isOpen,
     'aria-controls': drawerId,
@@ -59,8 +61,9 @@ export const DrawerTrigger = ({
     return React.cloneElement(child, {
       ...child.props,
       ...props,
-      ...a11y,
+      ...ariaStates,
       className: cn(child.props.className || '', className),
+      'aria-label': child.props['aria-label'] ?? ariaLabel,
       onClick: handleToggle(child.props.onClick),
     });
   }
@@ -73,7 +76,7 @@ export const DrawerTrigger = ({
       leftIcon={leftIcon}
       rightIcon={rightIcon}
       onClick={handleToggle(onClick)}
-      {...a11y}
+      {...ariaStates}
       {...props}
     >
       {children}
