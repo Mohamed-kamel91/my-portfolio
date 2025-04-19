@@ -1,6 +1,6 @@
 'use client';
 
-import { PreloadResources } from './preload-resources';
+import { PreloadResources } from './_providers/preload-resources';
 import { CookiesProvider } from 'react-cookie';
 import { ThemeProvider } from 'next-themes';
 import { LanguageProvider } from '@/features/language';
@@ -12,17 +12,12 @@ type AppProviderProps = {
   children: React.ReactNode;
 };
 
-export const AppProvider = ({
-  lang,
-  children,
-}: AppProviderProps) => {
+export const AppProvider = ({ lang, children }: AppProviderProps) => {
   return (
     <PreloadResources>
       <CookiesProvider>
         <ThemeProvider enableSystem={false}>
-          <LanguageProvider lang={lang}>
-            {children}
-          </LanguageProvider>
+          <LanguageProvider lang={lang}>{children}</LanguageProvider>
         </ThemeProvider>
       </CookiesProvider>
     </PreloadResources>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { dir } from 'i18next';
 
-import { AppProvider } from './app-provider';
+import { AppProvider } from './provider';
 
 import { languages } from '@/i18n/settings';
 import { Locales } from '@/i18n/types';
@@ -34,7 +34,7 @@ export default async function RootLayout({
 
   return (
     <html lang={lang} dir={dir(lang)} suppressHydrationWarning>
-      <body>
+      <body suppressHydrationWarning>
         <AppProvider lang={lang}>{children}</AppProvider>
       </body>
     </html>

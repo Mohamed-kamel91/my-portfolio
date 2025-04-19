@@ -17,6 +17,14 @@ beforeAll(() => {
         },
       };
     }),
+    useI18n: vi.fn(() => {
+      return {
+        t: (i18nKey: string) => i18nKey,
+        i18n: {
+          changeLanguage: () => new Promise(() => {}),
+        },
+      };
+    }),
   }));
 });
 

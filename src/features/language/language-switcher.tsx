@@ -27,7 +27,7 @@ export const LanguageSwitcher = ({
 
   return (
     <Link
-      className="text-sm font-medium"
+      className="p-2 text-sm font-medium"
       href={href ?? generateUrl()}
       hrefLang={nextLang}
       aria-label={t('language.switchTo', {
