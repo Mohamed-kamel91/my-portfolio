@@ -14,6 +14,7 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import { useCookies } from 'react-cookie';
 
 import { getOptions, languages, cookieName } from './settings';
+import { useLanguage } from '@/features/language';
 
 const isServer = typeof window === 'undefined';
 
@@ -54,9 +55,7 @@ export function useTranslation<
     i18n.changeLanguage(lng);
   } else {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [activeLng, setActiveLng] = useState(
-      i18n.resolvedLanguage,
-    );
+    const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage);
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
@@ -78,4 +77,10 @@ export function useTranslation<
     }, [lng, cookies.i18next]);
   }
   return ret;
+}
+
+export function useI18n() {
+  const lang = useLanguage();
+  const i18n = useTranslation(lang.currentLang);
+  return { ...i18n };
 }
