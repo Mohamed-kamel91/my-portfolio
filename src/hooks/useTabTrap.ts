@@ -1,22 +1,27 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 type useTabTrapOptions = {
   initialFocus?: boolean;
 };
+
+const isHTMLElement = (node: unknown): node is HTMLElement => {
+  return node instanceof HTMLElement;
+};
+
 export const useTabTrap = <T extends HTMLElement>(
-  ref: React.RefObject<T | null>,
   options: useTabTrapOptions = {},
 ) => {
+  const [container, setContainer] = useState<T | null>(null);
+
   // Options
   const { initialFocus = false } = options;
 
-  const isHTMLElement = (node: unknown): node is HTMLElement => {
-    return node instanceof HTMLElement;
-  };
+  const targetRef = useCallback((node: T | null) => {
+    if (!node) return;
+    setContainer(node);
+  }, []);
 
   useEffect(() => {
-    const container = ref.current;
-
     if (!container) return;
 
     const focusableElements = [
@@ -69,5 +74,7 @@ export const useTabTrap = <T extends HTMLElement>(
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [ref]);
+  }, [container, initialFocus]);
+
+  return targetRef;
 };
