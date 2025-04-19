@@ -10,10 +10,10 @@ import { cn } from '@/utils/cn';
 
 const iconButtonVariants = tv({
   base: cn(
-    'relative inline-flex items-center justify-center',
-    'cursor-pointer rounded-full',
+    'relative inline-flex shrink-0 items-center justify-center',
+    'cursor-pointer rounded-full outline-2 outline-transparent',
     'transition-colors duration-300 ease-in-out',
-    'disabled:pointer-events-none disabled:opacity-50',
+    'focus-visible:outline-foreground disabled:pointer-events-none disabled:opacity-50',
   ),
   variants: {
     variant: {
@@ -23,6 +23,9 @@ const iconButtonVariants = tv({
         'bg-secondary text-secondary-foreground hover:bg-secondary/65 dark:hover:bg-secondary/90',
       outline:
         'bg-outline text-outline-foreground border-border hover:bg-muted border',
+      ghost:
+        'hover:bg-ghost hover:text-ghost-foreground text-foreground bg-transparent',
+      unstyled: 'transition-none',
     },
     size: {
       sm: 'size-[35px]',
