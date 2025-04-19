@@ -8,16 +8,21 @@
       "light": "light",
       "dark": "dark"
     },
-    "label": "Switch to {{theme}} mode"
+    "label": "Switch to {{theme}} mode",
+    "title": "{{theme}} mode"
   },
   "navigation": {
     "about": "About",
     "experience": "Experience",
-    "project": "Project"
+    "projects": "Projects"
   },
   "footer": {
     "cta": "Let's start a project together",
     "resume": "Resume",
     "builtBy": "Designed & Built by Mohamed Kamel"
+  },
+  "about": {
+    "name": "Mohamed Kamel",
+    "job": "Frontend Developer"
   }
 }
