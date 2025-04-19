@@ -1,5 +1,5 @@
 import { userEvent, render, screen } from '@/test/test-utils';
-import { mockUseTranslation } from '@/test/mocks/i18n-mocks';
+import { mockUseI18n } from '@/test/mocks/i18n-mocks';
 
 import { ThemeToggler } from './theme-toggler';
 
@@ -19,7 +19,7 @@ describe('Theme toggler', () => {
   });
 
   it('should toggle between light and dark mode in English', async () => {
-    mockUseTranslation(themeTogglerT);
+    mockUseI18n(themeTogglerT);
 
     const user = userEvent.setup();
 
