@@ -24,6 +24,7 @@ const buttonVariants = tv({
         'bg-secondary text-secondary-foreground hover:bg-secondary/65 dark:hover:bg-secondary/95',
       outline:
         'bg-outline text-outline-foreground border-border hover:bg-muted border',
+      unstyled: 'transition-none',
     },
     size: {
       sm: 'h-13 min-w-16 gap-1.5 px-4',
@@ -72,9 +73,7 @@ export const Button = React.forwardRef(
         {...props}
       >
         {leftIcon && <span>{leftIcon}</span>}
-        <span className={cn('whitespace-nowrap')}>
-          {children}
-        </span>
+        <span className={cn('whitespace-nowrap')}>{children}</span>
         {rightIcon && <span>{leftIcon}</span>}
       </Component>
     );
