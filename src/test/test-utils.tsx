@@ -4,7 +4,7 @@ import {
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { AppProvider } from '@/app/[lang]/app-provider';
+import { AppProvider } from '@/app/[lang]/provider';
 import { Locales } from '@/i18n/types';
 
 type CustomRenderOptions = Omit<RenderOptions, 'wrapper'> & {
@@ -18,11 +18,9 @@ const customRender = (
 ) => {
   const { lang = 'en', ...renderOptions } = options || {};
 
-  const Provider = ({
-    children,
-  }: {
-    children: React.ReactNode;
-  }) => <AppProvider lang={lang}>{children}</AppProvider>;
+  const Provider = ({ children }: { children: React.ReactNode }) => (
+    <AppProvider lang={lang}>{children}</AppProvider>
+  );
 
   rtlRender(ui, { wrapper: Provider, ...renderOptions });
 };
