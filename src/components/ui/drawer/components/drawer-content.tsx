@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React from 'react';
 import { tv } from 'tailwind-variants';
 
 import { DrawerBackdrop } from './drawer-backdrop';
@@ -74,10 +74,9 @@ export const DrawerContent = React.forwardRef<
   const { id: drawerId, isOpen, variants } = useDrawer();
   const { size, position } = variants;
 
-  const drawerRef = useRef<HTMLDivElement>(null);
-
   useScrollLock({ lock: isOpen });
-  useTabTrap(drawerRef);
+
+  const drawerRef = useTabTrap<HTMLDivElement>();
 
   if (!isOpen) {
     return null;
