@@ -12,7 +12,7 @@ const buttonVariants = tv({
   base: cn(
     'relative inline-flex items-center justify-center',
     'text-sm font-medium',
-    'cursor-pointer rounded-md',
+    'rounded-btn cursor-pointer',
     'transition-colors duration-300 ease-in-out',
     'disabled:pointer-events-none disabled:opacity-50',
   ),
