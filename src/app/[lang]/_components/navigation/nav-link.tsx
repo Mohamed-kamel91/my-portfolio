@@ -23,7 +23,7 @@ export const NavLink = ({ name, hash, isActive }: NavLinkProps) => {
         'group',
         'min-w-20',
         'text-base font-normal',
-        'hover:bg-primary/90 hover:text-primary-foreground',
+        'hover:bg-primary/90 hover:text-primary-foreground not-dark:outline-offset-2',
         'transition-colors duration-150',
         isActive && 'bg-primary/90 text-primary-foreground',
       )}
