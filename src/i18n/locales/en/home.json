@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "title": "Mohamed Kamel",
+    "subtitle": "Frontend Developer",
+    "description": "Building sleek, scalable, and high-performance web applications with great user experiences.",
+    "cta": {
+      "aboutMe": "About me",
+      "viewMyWork": "View my work"
+    }
+  }
+}
