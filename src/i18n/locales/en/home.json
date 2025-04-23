@@ -7,5 +7,16 @@
       "aboutMe": "About me",
       "viewMyWork": "View my work"
     }
+  },
+  "contact": {
+    "title": "Let's start a project together",
+    "resume": {
+      "label": "Resume",
+      "ariaLabel": "Download resume"
+    },
+    "email": {
+      "gmail": "mohakamel91@gmail.com",
+      "ariaLabel": "Send an email to me"
+    }
   }
 }

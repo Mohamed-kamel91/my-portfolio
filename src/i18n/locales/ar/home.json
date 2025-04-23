@@ -7,5 +7,16 @@
       "aboutMe": "نبذة عني",
       "viewMyWork": "عرض أعمالي"
     }
+  },
+  "contact": {
+    "title": "يلا نبدأ مشروع مع بعض",
+    "resume": {
+      "label": "السيرة الذاتية",
+      "ariaLabel": "تحميل السيرة الذاتية"
+    },
+    "email": {
+      "gmail": "mohakamel91@gmail.com",
+      "ariaLabel": "أرسل لي بريدًا إلكترونيًا"
+    }
   }
 }
