@@ -26,6 +26,11 @@ const stack = tv({
       end: 'items-end',
       baseline: 'items-baseline',
     },
+    wrap: {
+      wrap: 'flex-wrap',
+      noWrap: 'flex-nowrap',
+      reverse: 'flex-wrap-reverse',
+    },
     gap: {
       0: 'gap-0',
       1: 'gap-1',
@@ -36,12 +41,14 @@ const stack = tv({
       6: 'gap-6',
       8: 'gap-8',
       10: 'gap-10',
+      20: 'gap-20',
     },
   },
   defaultVariants: {
     direction: 'row',
     justify: 'start',
     align: 'stretch',
+    wrap: 'noWrap',
   },
 });
 
@@ -50,14 +57,23 @@ type StackProps = React.HTMLAttributes<HTMLDivElement> &
 
 export const Stack = React.forwardRef<HTMLDivElement, StackProps>(
   (
-    { className, direction, justify, align, gap, children, ...props },
+    {
+      className,
+      direction,
+      justify,
+      align,
+      wrap,
+      gap,
+      children,
+      ...props
+    },
     ref,
   ) => {
     return (
       <div
         ref={ref}
         className={cn(
-          stack({ direction, justify, align, gap }),
+          stack({ direction, justify, align, wrap, gap }),
           className,
         )}
         {...props}
