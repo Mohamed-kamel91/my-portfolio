@@ -2,7 +2,7 @@
 
 import { AtSign } from 'lucide-react';
 
-import { Container } from '@/components/ui/container';
+import { Container } from '@/components/ui/containers';
 import { Stack } from '@/components/ui/stack';
 import { Button, IconButton } from '@/components/ui/buttons';
 
