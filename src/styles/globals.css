@@ -6,8 +6,23 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: var(--font-inter);
     @apply bg-(--background) text-(--foreground);
+  }
+}
+
+@layer components {
+  .underline-custom {
+    @apply border-muted border-b-2 outline-2 outline-offset-3 outline-transparent;
+    @apply focus-visible:outline-foreground;
+    @apply after:absolute after:-bottom-0.5 after:left-0 after:content-[""];
+    @apply after:bg-underline after:h-0.5 after:w-0;
+    @apply after:transition-all after:duration-200;
+    @apply hover:after:w-full focus-visible:after:w-full;
   }
 }
