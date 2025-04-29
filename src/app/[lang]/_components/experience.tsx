@@ -9,12 +9,10 @@ import {
   TabsList,
   TabsPanels,
 } from '@/components/ui/tabs';
-import { useI18n } from '@/i18n/client';
-import {
-  Technology,
-  TechTags,
-} from '../../_shared/components/technologies';
 import { Stack } from '@/components/ui/stack';
+import { Technologies, Technology } from '@/components/technologies';
+
+import { useI18n } from '@/i18n/client';
 
 type Experience = {
   period: string;
@@ -58,7 +56,7 @@ export const Experience = () => {
                     {job.description}
                   </p>
                   {job.technologies && (
-                    <TechTags
+                    <Technologies
                       tags={job.technologies}
                       tagSize="icon-md"
                     />

@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/buttons';
 
 import { useI18n } from '@/i18n/client';
 
-import { socials } from '../../_shared/constants/socials';
+import { socials } from '@/constants/socials';
 
 export const About = () => {
   const { t } = useI18n('home');
