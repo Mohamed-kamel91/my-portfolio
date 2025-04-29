@@ -49,9 +49,9 @@ type ButtonBaseProps = {
   rightIcon?: React.ReactNode;
 };
 
-type ButtonVariantsProps = VariantProps<typeof buttonVariants>;
+export type ButtonVariantsProps = VariantProps<typeof buttonVariants>;
 
-type ButtonCustomProps = ButtonBaseProps & ButtonVariantsProps;
+export type ButtonCustomProps = ButtonBaseProps & ButtonVariantsProps;
 
 export type ButtonProps<C extends React.ElementType> =
   PolymorphicPropsWithRef<C, ButtonCustomProps>;
