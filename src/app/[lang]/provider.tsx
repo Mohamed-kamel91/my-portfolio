@@ -1,6 +1,6 @@
 'use client';
 
-import { PreloadResources } from './_providers/preload-resources';
+import { PreloadResources } from '@/providers/preload-resources';
 import { CookiesProvider } from 'react-cookie';
 import { ThemeProvider } from 'next-themes';
 import { LanguageProvider } from '@/features/language';
