@@ -38,6 +38,7 @@
   --ghost-foreground: var(--color-dark);
 
   --border: var(--color-gray-light);
+  --underline: var(--color-dark);
 }
 
 [data-theme='dark'] {
@@ -61,6 +62,7 @@
   --ghost-foreground: var(--color-dark);
 
   --border: var(--color-gray-dark);
+  --underline: var(--color-light);
 }
 
 @theme inline {
@@ -88,8 +90,10 @@
   --color-ghost-foreground: var(--ghost-foreground);
 
   --color-border: var(--border);
+  --color-underline: var(--underline);
 
   /* Border Radius */
+  --radius-default: var(--radius-28);
   --radius-btn: var(--radius-28);
   --radius-media: var(--radius-50);
 }
