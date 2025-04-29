@@ -7,7 +7,7 @@ export const Container = ({
   ...props
 }: ContainerProps) => (
   <div
-    className={cn('mx-auto max-w-6xl px-6', className)}
+    className={cn('mx-auto max-w-3xl px-6 sm:px-12', className)}
     {...props}
   />
 );
