@@ -11,7 +11,7 @@ import {
   DrawerCloseButton,
   DrawerHeader,
 } from '@/components/ui/drawer';
-import { Container } from '@/components/ui/container';
+import { Container } from '@/components/ui/containers';
 import { Stack } from '@/components/ui/stack';
 import { IconButton } from '@/components/ui/buttons';
 import { ReactPortal } from '@/components/ui/portal/portal';
