@@ -4,7 +4,7 @@ import { i18nMiddleware } from './i18n/middleware';
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|assets|fonts|documents|favicon.ico|sw.js|site.webmanifest).*)',
+    '/((?!api|_next/static|_next/image|assets|images|fonts|documents|favicon.ico|sw.js|site.webmanifest).*)',
   ],
 };
 
