@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { Container } from '@/components/ui/container';
+import { Container } from '@/components/ui/containers';
 import { Stack } from '@/components/ui/stack';
 import { Button } from '@/components/ui/buttons';
 
@@ -13,7 +13,7 @@ export const HeroHeader = () => {
   const { t } = useI18n('home');
 
   return (
-    <div className="pt-5 md:pt-15">
+    <div className="mb-15 py-5 md:py-15">
       <Container className="max-w-3xl">
         <Stack direction="col">
           <h1 className="mb-2 text-5xl font-bold">
@@ -31,8 +31,8 @@ export const HeroHeader = () => {
           <Stack gap={2}>
             <Button
               as={Link}
-              href="#projects"
-              size="md"
+              href="#about"
+              size="lg"
               className="shrink-0"
             >
               {t('hero.cta.aboutMe')}
@@ -40,7 +40,7 @@ export const HeroHeader = () => {
             <Button
               as={Link}
               href="#projects"
-              size="md"
+              size="lg"
               variant="outline"
               className="shrink-0"
             >
