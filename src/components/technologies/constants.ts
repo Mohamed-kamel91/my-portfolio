@@ -1,0 +1,16 @@
+export const technologies = [
+  { name: 'HTML', icon: 'mdi:language-html5' },
+  { name: 'CSS', icon: 'flowbite:css-solid' },
+  { name: 'Sass', icon: 'mdi:sass' },
+  { name: 'JavaScript', icon: 'mdi:language-javascript' },
+  { name: 'TypeScript', icon: 'mdi:language-typescript' },
+  { name: 'React', icon: 'mdi:react' },
+  { name: 'Next.js', icon: 'akar-icons:nextjs-fill' },
+  { name: 'tailwindcss', icon: 'mdi:tailwind' },
+  { name: 'Redux', icon: 'akar-icons:redux-fill' },
+  { name: 'React Query', icon: 'simple-icons:reactquery' },
+  { name: 'Node.js', icon: 'mdi:nodejs' },
+  { name: 'Express', icon: 'devicon:express' },
+  { name: 'MongoDB', icon: 'lineicons:mongodb' },
+  { name: 'WordPress', icon: 'ic:baseline-wordpress' },
+] as const;
