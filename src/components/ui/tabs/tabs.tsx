@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 
-import { Button } from '../buttons';
+import { Button, ButtonCustomProps } from '../buttons';
 
 import { useTabs } from './tabs-context';
 import { cn } from '@/utils/cn';
@@ -11,7 +11,10 @@ export const TabsList = ({ className, children }: TabsListProps) => {
   const { active, setActive } = useTabs();
 
   return (
-    <div className={cn('flex px-4 py-2', className)} role="tablist">
+    <div
+      className={cn('flex gap-2 px-4 py-2', className)}
+      role="tablist"
+    >
       {Children.map(children, (child, index) => {
         return React.cloneElement(
           child as React.ReactElement<TabProps>,
@@ -37,7 +40,7 @@ export const TabsPanels = ({
   const { active } = useTabs();
 
   return (
-    <div className={cn(className)}>
+    <div className={cn('w-full', className)}>
       {Children.map(children, (child, index) => {
         return React.cloneElement(
           child as React.ReactElement<TabPanelProps>,
@@ -52,25 +55,28 @@ export const TabsPanels = ({
   );
 };
 
-type TabProps = {
-  id?: string;
-  isActive?: boolean;
-  controls?: string;
-  children: React.ReactNode;
-  onClick?: () => void;
-};
+type TabProps = React.HTMLAttributes<HTMLButtonElement> &
+  ButtonCustomProps & {
+    id?: string;
+    isActive?: boolean;
+    controls?: string;
+    children: React.ReactNode;
+    onClick?: () => void;
+  };
 
 export const Tab = ({
   id,
+  className,
   isActive,
   controls,
   onClick,
   children,
+  ...props
 }: TabProps) => {
   return (
     <Button
       id={id}
-      className="shrink-0"
+      className={cn('shrink-0', className)}
       variant={isActive ? 'primary' : 'outline'}
       size="lg"
       type="button"
@@ -78,6 +84,7 @@ export const Tab = ({
       aria-selected={isActive}
       aria-controls={controls}
       onClick={onClick}
+      {...props}
     >
       {children}
     </Button>
