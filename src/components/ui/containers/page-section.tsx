@@ -11,7 +11,7 @@ const sectionVariants = tv({
       'mb-12 md:mb-15',
       'font-bold',
     ),
-    content: '',
+    content: 'w-full',
   },
   variants: {
     titleAs: {
