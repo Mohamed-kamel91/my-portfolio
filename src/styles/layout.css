@@ -1,0 +1,23 @@
+:root {
+  /* Z-Index */
+  --z-1000: 1000;
+  --z-950: 950;
+  --z-700: 700;
+
+  --z-modal: var(--z-1000);
+  --z-drawer: var(--z-950);
+  --z-overlay: var(--z-700);
+}
+
+/* Z-Index */
+@utility z-modal {
+  z-index: var(--z-modal);
+}
+
+@utility z-drawer {
+  z-index: var(--z-drawer);
+}
+
+@utility z-overlay {
+  z-index: var(--z-overlay);
+}

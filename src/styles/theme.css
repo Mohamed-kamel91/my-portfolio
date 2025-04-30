@@ -1,0 +1,99 @@
+:root {
+  /* Fonts */
+  --font-display-en: 'Inter', Arial, Helvetica, sans-serif;
+  --font-display-ar: 'Cairo', Arial, Helvetica, serif;
+
+  /* Colors */
+  --color-light: #f3f4f0;
+  --color-dark: #242126;
+  --color-white: #ffffff;
+  --color-gray-light: #dbdbdb;
+  --color-gray: #969696;
+  --color-gray-dark: #575757;
+
+  /* Border Radius */
+  --radius-28: 1.75rem; /* 28px */
+  --radius-38: 2.375rem; /* 38px */
+  --radius-50: 3.125rem; /* 50px */
+}
+
+:root {
+  /* Colors */
+  --background: var(--color-light);
+  --foreground: var(--color-dark);
+
+  --primary: var(--color-dark);
+  --primary-foreground: var(--color-light);
+
+  --secondary: var(--color-white);
+  --secondary-foreground: var(--color-dark);
+
+  --outline: var(--color-light);
+  --outline-foreground: var(--color-dark);
+
+  --muted: var(--color-gray-light);
+  --muted-foreground: var(--color-gray-dark);
+
+  --ghost: var(--color-white);
+  --ghost-foreground: var(--color-dark);
+
+  --border: var(--color-gray-light);
+  --underline: var(--color-dark);
+}
+
+[data-theme='dark'] {
+  /* Colors */
+  --background: var(--color-dark);
+  --foreground: var(--color-light);
+
+  --primary: var(--color-gray-dark);
+  --primary-foreground: var(--color-light);
+
+  --secondary: var(--color-light);
+  --secondary-foreground: var(--color-dark);
+
+  --outline: var(--color-dark);
+  --outline-foreground: var(--color-light);
+
+  --muted: var(--color-gray-dark);
+  --muted-foreground: var(--color-gray);
+
+  --ghost: var(--color-light);
+  --ghost-foreground: var(--color-dark);
+
+  --border: var(--color-gray-dark);
+  --underline: var(--color-light);
+}
+
+@theme inline {
+  /* Fonts */
+  --font-inter: var(--font-display-en);
+  --font-cairo: var(--font-display-ar);
+
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-outline: var(--outline);
+  --color-outline-foreground: var(--outline-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-ghost: var(--ghost);
+  --color-ghost-foreground: var(--ghost-foreground);
+
+  --color-border: var(--border);
+  --color-underline: var(--underline);
+
+  /* Border Radius */
+  --radius-default: var(--radius-28);
+  --radius-btn: var(--radius-28);
+  --radius-media: var(--radius-50);
+}

@@ -11,20 +11,28 @@ import { cn } from '@/utils/cn';
 const iconButtonVariants = tv({
   base: cn(
     'relative inline-flex shrink-0 items-center justify-center',
-    'cursor-pointer rounded-full outline-2 outline-transparent',
+    'cursor-pointer rounded-full outline-2 outline-offset-0 outline-transparent',
     'transition-colors duration-300 ease-in-out',
     'focus-visible:outline-foreground disabled:pointer-events-none disabled:opacity-50',
   ),
   variants: {
     variant: {
-      primary:
-        'bg-primary text-primary-foreground hover:bg-primary/90',
-      secondary:
-        'bg-secondary text-secondary-foreground hover:bg-secondary/65 dark:hover:bg-secondary/90',
-      outline:
-        'bg-outline text-outline-foreground border-border hover:bg-muted border',
-      ghost:
-        'hover:bg-ghost hover:text-ghost-foreground text-foreground bg-transparent',
+      primary: cn(
+        'bg-primary text-primary-foreground',
+        'hover:bg-primary/90 not-dark:outline-offset-2',
+      ),
+      secondary: cn(
+        'bg-secondary text-secondary-foreground',
+        'hover:bg-secondary/65 dark:hover:bg-secondary/90 dark:outline-offset-2',
+      ),
+      outline: cn(
+        'bg-outline text-outline-foreground border-border border',
+        'hover:bg-muted',
+      ),
+      ghost: cn(
+        'text-foreground bg-transparent',
+        'hover:bg-ghost hover:text-ghost-foreground',
+      ),
       unstyled: 'transition-none',
     },
     size: {

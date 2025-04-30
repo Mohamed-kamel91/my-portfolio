@@ -24,9 +24,9 @@ const tagVariants = tv({
   },
 });
 
-type TagVariant = VariantProps<typeof tagVariants>;
+export type TagVariant = VariantProps<typeof tagVariants>;
 
-type TagProps = React.HTMLAttributes<HTMLDivElement> &
+export type TagProps = React.HTMLAttributes<HTMLDivElement> &
   TagVariant & {
     children: React.ReactNode;
   };
@@ -53,10 +53,7 @@ type TagName = {
   children: React.ReactNode;
 };
 
-export const TagName = ({
-  className = '',
-  children,
-}: TagName) => {
+export const TagName = ({ className = '', children }: TagName) => {
   return (
     <span
       className={cn(

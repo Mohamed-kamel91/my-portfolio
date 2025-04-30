@@ -12,8 +12,9 @@ export const DrawerBackdrop = () => {
   return (
     <div
       className={cn(
-        'fixed start-0 top-0 z-(--z-overlay) bg-black/30',
+        'z-overlay fixed start-0 top-0',
         'h-dvh w-screen',
+        'bg-black/30',
         'transition-colors duration-1000',
       )}
       onClick={close}

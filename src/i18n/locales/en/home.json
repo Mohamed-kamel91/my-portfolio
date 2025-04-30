@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "title": "Mohamed Kamel",
+    "subtitle": "Frontend Developer",
+    "description": "Building sleek, scalable, and high-performance web applications with great user experiences.",
+    "cta": {
+      "aboutMe": "About me",
+      "viewMyWork": "View my work"
+    }
+  },
+  "about": {
+    "title": "About",
+    "intro": "I'm a self-taught frontend developer with a passion for crafting engaging and user-friendly web applications. My journey into the world of development started with a curiosity about how websites work and a desire to create immersive digital experiences.",
+    "background": "Before diving into frontend development, I served as a Purchasing Officer in an IT company, where I managed vendor relations and negotiated contracts to optimize procurement strategies. This role has provided me with a unique perspective on project management and resource allocation in tech environments.",
+    "vision": "As I continue my journey as a frontend developer, I am excited to merge my technical expertise with my background in procurement and vendor management, creating solutions that are not only technologically sound but also strategically aligned with business objectives.",
+    "hobbies": "Outside of coding, I enjoy reading and playing games, but nothing beats the thrill of traveling to new destinations whenever I get the chance."
+  },
+  "experience": {
+    "title": "Experience",
+    "timeline": [
+      {
+        "period": "2022 - Present",
+        "position": "Frontend Developer",
+        "company": "Freelance",
+        "location": "Giza, Egypt",
+        "description": "I build modern, accessible web experiences using cutting-edge frontend technologies. Specializing in the React ecosystem, I transform complex requirements into intuitive interfaces with meticulous attention to performance, responsiveness, and user experience.",
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Next.js",
+          "tailwindcss",
+          "Redux",
+          "React Query",
+          "Node.js"
+        ]
+      },
+      {
+        "period": "2014 - 2019",
+        "position": "Purchasing Officer",
+        "company": "Libatell IT Solutions",
+        "location": "Doha, Qatar",
+        "description": "Managed IT procurement operations, optimizing vendor relationships and costs through contract negotiations, market analysis, and inventory management. Reduced delivery delays via streamlined order tracking, while maintaining precise records and cost reports for strategic decisions."
+      }
+    ]
+  },
+  "featuredProjects": {
+    "title": "Featured Projects",
+    "projects": [
+      {
+        "title": "Trendy Toys",
+        "subtitle": "E-commerce",
+        "year": "2022",
+        "description": "A full-stack e-commerce website selling toys, providing a seamless shopping experience.",
+        "technologies": [
+          "HTML",
+          "Sass",
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ],
+        "website": "trendytoys.netlify.app",
+        "image": {
+          "src": "/images/projects/trendy-toys.png",
+          "alt": "Trendy toys website"
+        }
+      },
+      {
+        "title": "Supercool",
+        "subtitle": "Business Website",
+        "year": "2022",
+        "description": "A static website for an HVAC company, showcasing solution, services and projects.",
+        "website": "supercool-eg.netlify.app",
+        "technologies": ["HTML", "Sass", "JavaScript"],
+        "image": {
+          "src": "/images/projects/supercool.png",
+          "alt": "Supercool website"
+        }
+      },
+      {
+        "title": "Bait Jadati",
+        "subtitle": "E-commerce",
+        "year": "2022",
+        "description": "WordPress e-commerce website selling premium homemade grocery products, focusing on nutritional value.",
+        "website": "baitjadati.com",
+        "technologies": ["WordPress"],
+        "image": {
+          "src": "/images/projects/bait-jadati.jpg",
+          "alt": "Bait Jadati website"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's start a project together",
+    "resume": {
+      "label": "Resume",
+      "ariaLabel": "Download resume"
+    },
+    "email": {
+      "gmail": "mohakamel91@gmail.com",
+      "ariaLabel": "Send an email to me"
+    }
+  }
+}

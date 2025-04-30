@@ -1,87 +1,17 @@
 @import 'tailwindcss';
 @import './fonts.css';
+@import './theme.css';
+@import './layout.css';
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-:root {
-  --font-display: 'Inter', Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-  --background: #f3f4f0;
-  --foreground: #242126;
-
-  --primary: #242126;
-  --primary-foreground: #f3f4f0;
-
-  --secondary: #ffffff;
-  --secondary-foreground: #242126;
-
-  --outline: #f3f4f0;
-  --outline-foreground: #242126;
-
-  --muted: #dbdbdb;
-  --muted-foreground: #575757;
-
-  --ghost: #ffffff;
-  --ghost-foreground: #242126;
-
-  --border: #dbdbdb;
-  --radius: 1.75rem;
-
-  --z-modal: 1000;
-  --z-drawer: 950;
-  --z-overlay: 700;
-}
-
-[data-theme='dark'] {
-  --background: #242126;
-  --foreground: #f3f4f0;
-
-  --primary: #575757;
-  --primary-foreground: #f3f4f0;
-
-  --secondary: #f3f4f0;
-  --secondary-foreground: #242126;
-
-  --outline: #242126;
-  --outline-foreground: #f3f4f0;
-
-  --muted: #575757;
-  --muted-foreground: #969696;
-
-  --ghost: #f3f4f0;
-  --ghost-foreground: #242126;
-
-  --border: #575757;
-}
-
-@theme inline {
-  --font-inter: var(--font-display);
-
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-
-  --color-outline: var(--outline);
-  --color-outline-foreground: var(--outline-foreground);
-
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-
-  --color-ghost: var(--ghost);
-  --color-ghost-foreground: var(--ghost-foreground);
-
-  --color-border: var(--border);
-
-  --radius-md: var(--radius);
-}
-
-body {
-  font-family: var(--font-inter);
-  background: var(--background);
-  color: var(--foreground);
+  body {
+    font-family: var(--font-inter);
+    @apply bg-(--background) text-(--foreground);
+  }
 }

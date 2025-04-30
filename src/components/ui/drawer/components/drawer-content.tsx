@@ -11,7 +11,7 @@ import { useDrawer } from '../useDrawer';
 import { cn } from '@/utils/cn';
 
 export const drawerVariants = tv({
-  base: cn('fixed z-(--z-modal)', 'text-foreground bg-background'),
+  base: cn('z-modal fixed', 'text-foreground bg-background'),
   variants: {
     size: {
       sm: 'w-screen',

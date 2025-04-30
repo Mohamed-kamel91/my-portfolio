@@ -17,9 +17,7 @@
     "projects": "Projects"
   },
   "footer": {
-    "cta": "Let's start a project together",
-    "resume": "Resume",
-    "builtBy": "Designed & Built by Mohamed Kamel"
+    "copyright": "M.K. {{year}}"
   },
   "about": {
     "name": "Mohamed Kamel",

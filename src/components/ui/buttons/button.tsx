@@ -12,18 +12,24 @@ const buttonVariants = tv({
   base: cn(
     'relative inline-flex items-center justify-center',
     'text-sm font-medium',
-    'cursor-pointer rounded-md',
+    'rounded-btn cursor-pointer outline-2 outline-offset-0 outline-transparent',
     'transition-colors duration-300 ease-in-out',
-    'disabled:pointer-events-none disabled:opacity-50',
+    'focus-visible:outline-foreground disabled:pointer-events-none disabled:opacity-50',
   ),
   variants: {
     variant: {
-      primary:
-        'bg-primary text-primary-foreground hover:bg-primary/90',
-      secondary:
-        'bg-secondary text-secondary-foreground hover:bg-secondary/65 dark:hover:bg-secondary/95',
-      outline:
-        'bg-outline text-outline-foreground border-border hover:bg-muted border',
+      primary: cn(
+        'bg-primary text-primary-foreground',
+        'hover:bg-primary/90 not-dark:outline-offset-2',
+      ),
+      secondary: cn(
+        'bg-secondary text-secondary-foreground',
+        'hover:bg-secondary/65 dark:hover:bg-secondary/95 dark:outline-offset-2',
+      ),
+      outline: cn(
+        'bg-outline text-outline-foreground border-border border',
+        'hover:bg-muted',
+      ),
       unstyled: 'transition-none',
     },
     size: {
@@ -43,9 +49,9 @@ type ButtonBaseProps = {
   rightIcon?: React.ReactNode;
 };
 
-type ButtonVariantsProps = VariantProps<typeof buttonVariants>;
+export type ButtonVariantsProps = VariantProps<typeof buttonVariants>;
 
-type ButtonCustomProps = ButtonBaseProps & ButtonVariantsProps;
+export type ButtonCustomProps = ButtonBaseProps & ButtonVariantsProps;
 
 export type ButtonProps<C extends React.ElementType> =
   PolymorphicPropsWithRef<C, ButtonCustomProps>;
@@ -74,7 +80,7 @@ export const Button = React.forwardRef(
       >
         {leftIcon && <span>{leftIcon}</span>}
         <span className={cn('whitespace-nowrap')}>{children}</span>
-        {rightIcon && <span>{leftIcon}</span>}
+        {rightIcon && <span>{rightIcon}</span>}
       </Component>
     );
   },
