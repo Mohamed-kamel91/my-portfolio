@@ -2,6 +2,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 import { Stack } from '@/components/ui/stack';
 import { Technologies } from '../technologies';
+import { Underline } from '../ui/underline';
 
 import { cn } from '@/utils/cn';
 import { Project } from './types';
@@ -29,28 +30,30 @@ export const ProjectInfo = ({
 
       <Technologies className="mb-4" tags={technologies} />
 
-      <a
-        className={cn(
-          'group/link relative shrink-0',
-          'mt-auto py-2',
-          'underline-custom',
-        )}
-        href={`https://${website}`}
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        dir="ltr"
-      >
-        {`www.${website}`}
-        <ArrowUpRight
-          size={18}
+      <Underline className="mt-auto">
+        <a
           className={cn(
-            'ml-1 inline',
-            'translate-y-px transition-transform duration-200',
-            'group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5',
-            'group-focus-visible/link:translate-x-px group-focus-visible/link:-translate-y-px',
+            'group/link shrink-0',
+            'focus-visible:outline-foreground outline-2 outline-offset-3 outline-transparent',
+            'py-2',
           )}
-        />
-      </a>
+          href={`https://${website}`}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          dir="ltr"
+        >
+          {`www.${website}`}
+          <ArrowUpRight
+            size={18}
+            className={cn(
+              'ml-1 inline',
+              'translate-y-px transition-transform duration-300',
+              'group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5',
+              'group-focus-visible/link:translate-x-px group-focus-visible/link:-translate-y-px',
+            )}
+          />
+        </a>
+      </Underline>
     </Stack>
   );
 };
