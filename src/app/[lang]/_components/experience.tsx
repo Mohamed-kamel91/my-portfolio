@@ -14,6 +14,8 @@ import { Technologies, Technology } from '@/components/technologies';
 
 import { useI18n } from '@/i18n/client';
 
+import { cn } from '@/utils/cn';
+
 type Experience = {
   period: string;
   position: string;
@@ -32,16 +34,27 @@ export const Experience = () => {
 
   return (
     <Container className="max-w-3xl">
-      <PageSection id="experience" title={t('experience.title')}>
+      <PageSection
+        id="experience"
+        title={t('experience.title')}
+        contentClassName="min-h-78"
+      >
         <Tabs>
           <Stack
             className="-mx-4 md:flex-row"
             direction="col"
             gap={10}
           >
-            <TabsList className="shrink-0 gap-3 overflow-x-auto md:flex-col">
+            <TabsList
+              className={cn(
+                'shrink-0 md:flex-col',
+                'overflow-x-auto',
+              )}
+            >
               {experience.map((job) => (
-                <Tab key={job.period}>{job.period}</Tab>
+                <Tab key={job.period} className="w-37">
+                  {job.period}
+                </Tab>
               ))}
             </TabsList>
             <TabsPanels>
@@ -52,11 +65,12 @@ export const Experience = () => {
                   </h3>
                   <p className="mb-1">{job.position}</p>
                   <p className="mb-6">{job.location}</p>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-muted-foreground">
                     {job.description}
                   </p>
                   {job.technologies && (
                     <Technologies
+                      className="mt-6"
                       tags={job.technologies}
                       tagSize="icon-md"
                     />
