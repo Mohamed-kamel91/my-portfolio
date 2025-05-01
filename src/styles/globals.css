@@ -14,4 +14,8 @@
     font-family: var(--font-inter);
     @apply bg-(--background) text-(--foreground);
   }
+
+  [lang='ar'] body {
+    font-family: var(--font-cairo);
+  }
 }
