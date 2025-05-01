@@ -7,6 +7,10 @@ const fontFiles = [
   'Inter-Medium.woff2',
   'Inter-SemiBold.woff2',
   'Inter-Bold.woff2',
+  'Cairo-Regular.woff2',
+  'Cairo-Medium.woff2',
+  'Cairo-SemiBold.woff2',
+  'Cairo-Bold.woff2',
 ];
 
 const preloadFonts = () => {
