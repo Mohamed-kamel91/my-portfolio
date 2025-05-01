@@ -23,19 +23,21 @@ export const ProjectInfo = ({
       align="start"
       className="w-full lg:w-87 lg:shrink-0"
     >
-      <h3 className="mb-1 text-xl font-medium">{title}</h3>
+      <h3 className="mb-1 text-xl font-semibold">{title}</h3>
       <p className="mb-1">{subtitle}</p>
       <p className="mb-6">{year}</p>
-      <p className="text-muted-foreground mb-6">{description}</p>
+      <p className="text-muted-foreground mb-6 max-w-lg">
+        {description}
+      </p>
 
       <Technologies className="mb-4" tags={technologies} />
 
       <Underline className="mt-auto">
         <a
           className={cn(
-            'group/link shrink-0',
-            'focus-visible:outline-foreground outline-2 outline-offset-3 outline-transparent',
-            'py-2',
+            'group/link shrink-0 py-2',
+            'outline-2 outline-offset-3 outline-transparent',
+            'focus-visible:outline-foreground',
           )}
           href={`https://${website}`}
           target="_blank"
