@@ -1,18 +1,18 @@
 import { MainLayout } from '@/components/layouts/main-layout';
 import { HeroHeader } from './_components/hero-header';
-import { About } from './_components/about';
-import { Experience } from './_components/experience';
-import { Projects } from './_components/projects';
-import { Contact } from './_components/contact';
+import { AboutSection } from './_components/about-section';
+import { ExperienceSection } from './_components/experience-section';
+import { ProjectsSection } from './_components/projects-section';
+import { ContactSection } from './_components/contact-section';
 
 export default function Home() {
   return (
     <MainLayout>
       <HeroHeader />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+      <AboutSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <ContactSection />
     </MainLayout>
   );
 }

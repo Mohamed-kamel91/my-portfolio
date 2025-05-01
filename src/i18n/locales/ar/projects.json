@@ -1,0 +1,93 @@
+{
+  "metaData": {
+    "title": "المشاريع"
+  },
+  "title": "المشاريع",
+  "backTo": "محمد كامل",
+  "projects": [
+    {
+      "title": "تريندي تويز",
+      "subtitle": "متجر إلكتروني",
+      "year": "٢٠٢٢",
+      "description": "موقع تجارة إلكترونية متكامل لبيع الألعاب، يوفر تجربة تسوق سلسة.",
+      "technologies": [
+        "HTML",
+        "Sass",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "website": "trendytoys.netlify.app",
+      "image": {
+        "src": "/images/projects/trendy-toys.png",
+        "alt": "موقع تريندي تويز"
+      }
+    },
+    {
+      "title": "سوبر كول",
+      "subtitle": "موقع أعمال",
+      "year": "٢٠٢٢",
+      "description": "موقع ثابت (ستاتيك) لشركة متخصصة في أنظمة التبريد الصناعي، يعرض عرضًا رقميًا شاملًا لخبراتها التقنية.",
+      "website": "supercool-eg.netlify.app",
+      "technologies": ["HTML", "Sass", "JavaScript"],
+      "image": {
+        "src": "/images/projects/supercool.png",
+        "alt": "موقع سوبر كول"
+      }
+    },
+    {
+      "title": "بيت جدتي",
+      "subtitle": "متجر إلكتروني",
+      "year": "٢٠٢٢",
+      "description": "متجر إلكتروني على ووردبريس يبيع منتجات بقالة منزلية عالية الجودة، مع تركيز خاص على القيمة الغذائية.",
+      "website": "baitjadati.com",
+      "technologies": ["WordPress"],
+      "image": {
+        "src": "/images/projects/bait-jadati.jpg",
+        "alt": "موقع بيت جدتي"
+      }
+    },
+    {
+      "title": "زاب تسكس",
+      "subtitle": "إنتاجية",
+      "year": "٢٠٢٣",
+      "description": "تطبيق إدارة مهام مصمم لمساعدتك على البقاء منظمًا ومركّزًا. أضف، عدّل، وتتبع مهامك اليومية عبر واجهة نظيفة وسهلة الاستخدام.",
+      "website": "zaptasks.netlify.app",
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "tailwindcss",
+        "Redux",
+        "React Query"
+      ],
+      "image": {
+        "src": "/images/projects/zaptasks.png",
+        "alt": "واجهة تطبيق إدارة المهام تعرض قائمة بالمهام النشطة والمكتملة."
+      }
+    },
+    {
+      "title": "تيك تاك تو ارينا",
+      "subtitle": "لعبة",
+      "year": "٢٠٢٣",
+      "description": "لعبة إكس-أو (تيك تاك تو) بإمكانيات جديدة - واجهة تفاعلية حديثة مع حركات مرئية سلسة ولعب بديهي.",
+      "website": "tictactoe-arena.netlify.app",
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "tailwindcss",
+        "Redux"
+      ],
+      "image": {
+        "src": "/images/projects/tictactoe-arena.png",
+        "alt": "لعبة إكس-أو تفاعلية تظهر شبكة ٣x٣، لاعبان X و O وأزرار التحكم."
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "metaData": {
+    "title": "Projects"
+  },
+  "title": "Projects",
+  "backTo": "Mohamed Kamel",
+  "projects": [
+    {
+      "title": "Trendy Toys",
+      "subtitle": "E-commerce",
+      "year": "2022",
+      "description": "A full-stack e-commerce website selling toys, providing a seamless shopping experience.",
+      "technologies": [
+        "HTML",
+        "tailwindcss",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "website": "trendytoys.netlify.app",
+      "image": {
+        "src": "/images/projects/trendy-toys.png",
+        "alt": "Trendy toys website"
+      }
+    },
+    {
+      "title": "Supercool",
+      "subtitle": "Business Website",
+      "year": "2022",
+      "description": "A static website for an HVAC company, showcasing solution, services and projects.",
+      "website": "supercool-eg.netlify.app",
+      "technologies": ["HTML", "Sass", "JavaScript"],
+      "image": {
+        "src": "/images/projects/supercool.png",
+        "alt": "Supercool website"
+      }
+    },
+    {
+      "title": "Bait Jadati",
+      "subtitle": "E-commerce",
+      "year": "2022",
+      "description": "WordPress e-commerce website selling premium homemade grocery products, focusing on nutritional value.",
+      "website": "baitjadati.com",
+      "technologies": ["WordPress"],
+      "image": {
+        "src": "/images/projects/bait-jadati.jpg",
+        "alt": "Bait Jadati website"
+      }
+    },
+    {
+      "title": "ZapTasks",
+      "subtitle": "Productivity",
+      "year": "2023",
+      "description": "A task management app designed to help you stay organized and focused. Add, edit, and track your daily tasks with a clean and intuitive interface.",
+      "website": "zaptasks.netlify.app",
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "tailwindcss",
+        "Redux",
+        "React Query"
+      ],
+      "image": {
+        "src": "/images/projects/zaptasks.png",
+        "alt": "A task management app interface showing active and completed tasks list."
+      }
+    },
+    {
+      "title": "tictactoe Arena",
+      "subtitle": "Game",
+      "year": "2023",
+      "description": "Tic Tac Toe Reinvented - A dynamic, interactive game with sleek animations and intuitive gameplay.",
+      "website": "tictactoe-arena.netlify.app",
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "tailwindcss",
+        "Redux"
+      ],
+      "image": {
+        "src": "/images/projects/tictactoe-arena.png",
+        "alt": "Interactive Tic Tac Toe game showing a 3x3 grid, player X and O and action buttons."
+      }
+    }
+  ]
+}

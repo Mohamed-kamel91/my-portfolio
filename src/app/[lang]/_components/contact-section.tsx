@@ -10,7 +10,7 @@ import { useI18n } from '@/i18n/client';
 
 import { cn } from '@/utils/cn';
 
-export const Contact = () => {
+export const ContactSection = () => {
   const { t } = useI18n('home');
 
   return (
