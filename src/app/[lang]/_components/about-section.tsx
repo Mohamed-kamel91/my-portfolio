@@ -11,7 +11,7 @@ import { useI18n } from '@/i18n/client';
 
 import { socials } from '@/constants/socials';
 
-export const About = () => {
+export const AboutSection = () => {
   const { t } = useI18n('home');
 
   return (

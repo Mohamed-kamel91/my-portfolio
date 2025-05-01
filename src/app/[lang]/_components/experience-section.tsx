@@ -25,7 +25,7 @@ type Experience = {
   technologies?: Technology[];
 };
 
-export const Experience = () => {
+export const ExperienceSection = () => {
   const { t } = useI18n('home');
 
   const experience = t('experience.timeline', {
@@ -60,7 +60,7 @@ export const Experience = () => {
             <TabsPanels>
               {experience.map((job) => (
                 <TabPanel key={job.period}>
-                  <h3 className="mb-1 text-xl font-medium">
+                  <h3 className="mb-1 text-xl font-semibold">
                     {job.company}
                   </h3>
                   <p className="mb-1">{job.position}</p>
