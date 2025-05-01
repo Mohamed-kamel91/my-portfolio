@@ -41,10 +41,11 @@ export const underlineVariant = tv({
   },
 });
 
-type UnderlineProps = VariantProps<typeof underlineVariant> & {
-  className?: string;
-  children: React.ReactNode;
-};
+type UnderlineProps = React.HTMLAttributes<HTMLDivElement> &
+  VariantProps<typeof underlineVariant> & {
+    className?: string;
+    children: React.ReactNode;
+  };
 
 export const Underline = ({
   className,

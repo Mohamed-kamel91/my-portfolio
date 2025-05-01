@@ -39,6 +39,7 @@ export const Footer = () => {
             {socials.map((social) => (
               <a
                 key={social.name}
+                className="font-inter"
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"

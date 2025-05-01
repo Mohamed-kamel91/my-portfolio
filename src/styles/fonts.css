@@ -1,4 +1,4 @@
-/* Regular - 400 */
+/* Inter-Regular - 400 */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -7,7 +7,7 @@
   src: url('/fonts/Inter-Regular.woff2') format('woff2');
 }
 
-/* Medium - 500 */
+/* Inter-Medium - 500 */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -16,7 +16,7 @@
   src: url('/fonts/Inter-Medium.woff2') format('woff2');
 }
 
-/* SemiBold - 600 */
+/* Inter-SemiBold - 600 */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -25,11 +25,47 @@
   src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
 }
 
-/* Bold - 700 */
+/* Inter-Bold - 700 */
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url('/fonts/Inter-Bold.woff2') format('woff2');
+}
+
+/* Cairo-Regular - 400 */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Cairo-Regular.woff2') format('woff2');
+}
+
+/* Cairo-Medium - 500 */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Cairo-Medium.woff2') format('woff2');
+}
+
+/* Cairo-SemiBold - 600 */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Cairo-SemiBold.woff2') format('woff2');
+}
+
+/* Cairo-Bold - 700 */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Cairo-Bold.woff2') format('woff2');
 }

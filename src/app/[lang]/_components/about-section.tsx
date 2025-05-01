@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/buttons';
 import { useI18n } from '@/i18n/client';
 
 import { socials } from '@/constants/socials';
+import { cn } from '@/utils/cn';
 
 export const AboutSection = () => {
   const { t } = useI18n('home');
@@ -30,7 +31,10 @@ export const AboutSection = () => {
           {socials.map((social) => (
             <Button
               key={social.name}
-              className="shrink-0 text-base font-normal"
+              className={cn(
+                'shrink-0',
+                'font-inter text-base font-normal',
+              )}
               as="a"
               href={social.link}
               rel="noopener noreferrer"

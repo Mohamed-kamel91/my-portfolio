@@ -7,6 +7,8 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { useTranslation } from '@/i18n/client';
 import { useLanguage } from './language-context';
 
+import { cn } from '@/utils/cn';
+
 type LanguageSwitcherProps = Partial<LinkProps> &
   Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>;
 
@@ -27,7 +29,11 @@ export const LanguageSwitcher = ({
 
   return (
     <Link
-      className="p-2 text-sm font-medium"
+      className={cn(
+        'p-2',
+        'text-sm font-medium',
+        isEnglish ? 'font-cairo' : 'font-inter',
+      )}
       href={href ?? generateUrl()}
       hrefLang={nextLang}
       aria-label={t('language.switchTo', {
