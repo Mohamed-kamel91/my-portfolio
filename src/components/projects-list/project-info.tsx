@@ -32,10 +32,11 @@ export const ProjectInfo = ({
 
       <Technologies className="mb-4" tags={technologies} />
 
-      <Underline className="mt-auto">
+      <Underline className="mt-auto" dir="ltr">
         <a
           className={cn(
             'group/link shrink-0 py-2',
+            'font-inter',
             'outline-2 outline-offset-3 outline-transparent',
             'focus-visible:outline-foreground',
           )}

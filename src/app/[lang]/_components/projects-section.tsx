@@ -24,7 +24,7 @@ export const ProjectsSection = () => {
 
         <Stack justify="center" className="mt-20">
           <Button as={Link} href="/projects" size="lg">
-            View more Projects
+            {t('featuredProjects.cta')}
           </Button>
         </Stack>
       </PageSection>
