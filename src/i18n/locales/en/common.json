@@ -1,6 +1,10 @@
 {
+  "metaData": {
+    "title": "Mohamed Kamel",
+    "description": "Mohamed Kamel - Frontend Developer who builds responsive, user-centric web applications with modern technologies."
+  },
   "language": {
-    "name": "عربي",
+    "name": "العربية",
     "switchTo": "Switch to {{lang}}"
   },
   "theme": {
@@ -18,9 +22,5 @@
   },
   "footer": {
     "copyright": "M.K. {{year}}"
-  },
-  "about": {
-    "name": "Mohamed Kamel",
-    "job": "Frontend Developer"
   }
 }
