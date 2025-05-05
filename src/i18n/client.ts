@@ -82,5 +82,5 @@ export function useTranslation<
 export function useI18n(ns?: string) {
   const lang = useLanguage();
   const i18n = useTranslation(lang.currentLang, ns);
-  return { ...i18n };
+  return { ...i18n, ...lang };
 }

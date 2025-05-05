@@ -9,10 +9,11 @@ import { Project, ProjectsList } from '@/components/projects-list';
 
 import { useI18n } from '@/i18n/client';
 
+import { paths } from '@/config/paths';
 import { cn } from '@/utils/cn';
 
 export const ProjectsContent = () => {
-  const { t, i18n } = useI18n('projects');
+  const { t, currentLang } = useI18n('projects');
 
   const projects = t('projects', {
     returnObjects: true,
@@ -22,7 +23,7 @@ export const ProjectsContent = () => {
     <Container className="max-w-6xl">
       <div className="mb-15 md:mb-20">
         <Link
-          href="/"
+          href={paths.home.getHref(currentLang)}
           className={cn(
             'group/link',
             'inline-flex items-center gap-2',
@@ -30,7 +31,7 @@ export const ProjectsContent = () => {
             'font-medium',
           )}
         >
-          {i18n.language === 'en' ? (
+          {currentLang === 'en' ? (
             <ArrowLeft
               size={20}
               className="shrink-0 transition-transform group-hover/link:-translate-x-1"
